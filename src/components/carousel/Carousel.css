@@ -16,21 +16,17 @@
 .zoom {
   cursor: pointer;
   position: absolute;
-  top: 3%;
+  top: 0%;
   width: auto;
-  padding: 16px;
-  margin-top: -22px;
+  padding: 8px 12px;
+  right: 0;
+  border-radius: 3px 0 0 3px;
   color: white;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
-}
-
-.zoom {
-  right: 0;
-  border-radius: 3px 0 0 3px;
 }
 
 .prev,
@@ -45,17 +41,15 @@
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  border-radius: 10px;
   user-select: none;
 }
 
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
 }
 .prev {
   left: 0;
-  border-radius: 3px 0 0 3px;
 }
 .prev:hover,
 .next:hover {
