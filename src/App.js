@@ -74,43 +74,60 @@ function App() {
         setImageIndex={setSIndex}
         imageIndex={sIndex}
       />
-      <Typography variant="h3" component="div" gutterBottom>
+      <Typography variant="h4" component="div">
         SE VENDE
       </Typography>
-      <Typography variant="h5" component="div" gutterBottom>
+      <Typography variant="h6" component="div" gutterBottom>
         Ford Focus TDCi Trend 1.6 110cv 2005
       </Typography>
 
-      <div>
-        <div style={{ textAlign: 'center' }}>
-          <div
-            style={{
-              padding: '0 20px',
-            }}
-          >
-            <Carousel
-              data={data}
-              openLightBoxHandler={lightBoxHandler}
-              width="850px"
-              height="500px"
-              radius="10px"
-              automatic={false}
-              dots
-              pauseIconColor="white"
-              pauseIconSize="40px"
-              slideBackgroundColor="darkgrey"
-              slideImageFit="cover"
-              thumbnails
-              thumbnailWidth="100px"
-              style={{
-                textAlign: 'center',
-                maxWidth: '850px',
-                maxHeight: '500px',
-                margin: '0.35em auto',
-              }}
-            />
-          </div>
+      <div
+        style={{
+          padding: '0 20px',
+        }}
+      >
+        <Carousel
+          data={data}
+          openLightBoxHandler={lightBoxHandler}
+          width="850px"
+          height="500px"
+          radius="10px"
+          automatic={false}
+          dots
+          pauseIconColor="white"
+          pauseIconSize="40px"
+          slideBackgroundColor="darkgrey"
+          slideImageFit="cover"
+          thumbnails
+          thumbnailWidth="100px"
+          style={{
+            textAlign: 'center',
+            maxWidth: '850px',
+            maxHeight: 'fit-content',
+            margin: '0.7em auto',
+            marginBottom: '1em',
+          }}
+        />
+      </div>
+
+      <div style={{ margin: '0 20px' }}>
+        <div
+          style={{
+            display: 'flex',
+            width: '100%',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <Typography variant="h3" component="div">
+            3.255€
+          </Typography>
         </div>
+
+        <Typography variant="body1" component="div">
+          Coche revisado mecánicamente y listo para hacer muchos kilómetros. Se
+          le han realizado los siguientes cambios:
+        </Typography>
       </div>
       <Paper
         square
