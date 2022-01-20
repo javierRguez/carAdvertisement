@@ -7,6 +7,8 @@ import BottomNavigation from '@mui/material/BottomNavigation'
 import Button from '@mui/material/Button'
 import Carousel from './components/carousel/Carousel'
 import LightBox from './components/lightbox/LightBox '
+import Tabs from './components/tabs/Tabs'
+import WhatsappShareButton from './components/whatsappShareButton/WhatsappShareButton'
 
 function App() {
   const [toggle, setToggle] = useState(false)
@@ -64,7 +66,7 @@ function App() {
   ]
 
   return (
-    <div className="App">
+    <div className="App" style={{ paddingBottom: '60px' }}>
       <LightBox
         state={toggle}
         event={lightBoxHandler}
@@ -77,10 +79,11 @@ function App() {
       <Typography variant="h4" component="div">
         SE VENDE
       </Typography>
-      <Typography variant="h6" component="div" gutterBottom>
-        Ford Focus TDCi Trend 1.6 110cv 2005
-      </Typography>
-
+      <div style={{ margin: '0 20px' }}>
+        <Typography variant="h6" component="div" gutterBottom>
+          Ford Focus TDCi Trend 1.6 110cv 2005
+        </Typography>
+      </div>
       <div
         style={{
           padding: '0 20px',
@@ -119,16 +122,13 @@ function App() {
             justifyContent: 'center',
           }}
         >
-          <Typography variant="h3" component="div">
+          <Typography variant="h3" component="div" gutterBottom>
             3.255€
           </Typography>
         </div>
-
-        <Typography variant="body1" component="div">
-          Coche revisado mecánicamente y listo para hacer muchos kilómetros. Se
-          le han realizado los siguientes cambios:
-        </Typography>
+        <Tabs />
       </div>
+      <WhatsappShareButton />
       <Paper
         square
         sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }}
