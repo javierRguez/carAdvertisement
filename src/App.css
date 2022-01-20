@@ -24,4 +24,5 @@ hr {
 .pruebamio .MuiDialog-paper {
   border-radius: 10px !important;
   padding: 2% !important;
+  min-height: 500px;
 }

@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
+import { Helmet } from 'react-helmet'
 import './App.css'
+import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import CallIcon from '@mui/icons-material/Call'
 import Paper from '@mui/material/Paper'
@@ -78,6 +80,10 @@ function App() {
 
   return (
     <div className="App" style={{ paddingBottom: '60px' }}>
+      <Helmet>
+        <title>Ford Focus (2005) - 3.255 €</title>
+        <link rel="canonical" href="https://car-advertisement.web.app/" />
+      </Helmet>
       <ContactModal closeModal={handleClose} open={open} />
       <LightBox
         state={toggle}
@@ -88,75 +94,77 @@ function App() {
         setImageIndex={setSIndex}
         imageIndex={sIndex}
       />
-      <Typography variant="h4" component="div">
-        SE VENDE
-      </Typography>
-      <div style={{ margin: '0 20px' }}>
-        <Typography variant="h6" component="div" gutterBottom>
-          Ford Focus TDCi Trend 1.6 110cv 2005
+      <Container maxWidth="md">
+        <Typography variant="h4" component="div">
+          SE VENDE
         </Typography>
-      </div>
-      <div
-        style={{
-          padding: '0 20px',
-        }}
-      >
-        <Carousel
-          data={data}
-          openLightBoxHandler={lightBoxHandler}
-          width="850px"
-          height="500px"
-          radius="10px"
-          automatic={false}
-          dots
-          pauseIconColor="white"
-          pauseIconSize="40px"
-          slideBackgroundColor="darkgrey"
-          slideImageFit="cover"
-          thumbnails
-          thumbnailWidth="100px"
-          style={{
-            textAlign: 'center',
-            maxWidth: '850px',
-            maxHeight: 'fit-content',
-            margin: '0.7em auto',
-            marginBottom: '1em',
-          }}
-        />
-      </div>
-
-      <div style={{ margin: '0 20px' }}>
-        <div
-          style={{
-            display: 'flex',
-            width: '100%',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <Typography variant="h3" component="div" gutterBottom>
-            3.255€
+        <div style={{ margin: '0 20px' }}>
+          <Typography variant="h6" component="div" gutterBottom>
+            Ford Focus TDCi Trend 1.6 110cv 2005
           </Typography>
         </div>
-        <Tabs />
-      </div>
-      <WhatsappShareButton />
-      <Paper
-        square
-        sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }}
-        elevation={3}
-      >
-        <BottomNavigation>
-          <Button
-            fullWidth
-            variant="contained"
-            endIcon={<CallIcon />}
-            onClick={handleClickOpen}
+        <div
+          style={{
+            padding: '0 20px',
+          }}
+        >
+          <Carousel
+            data={data}
+            openLightBoxHandler={lightBoxHandler}
+            width="850px"
+            height="500px"
+            radius="10px"
+            automatic={false}
+            dots
+            pauseIconColor="white"
+            pauseIconSize="40px"
+            slideBackgroundColor="darkgrey"
+            slideImageFit="cover"
+            thumbnails
+            thumbnailWidth="100px"
+            style={{
+              textAlign: 'center',
+              maxWidth: '850px',
+              maxHeight: 'fit-content',
+              margin: '0.7em auto',
+              marginBottom: '1em',
+            }}
+          />
+        </div>
+
+        <div style={{ margin: '0 20px' }}>
+          <div
+            style={{
+              display: 'flex',
+              width: '100%',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
           >
-            Contacto
-          </Button>
-        </BottomNavigation>
-      </Paper>
+            <Typography variant="h3" component="div" gutterBottom>
+              3.255€
+            </Typography>
+          </div>
+          <Tabs />
+        </div>
+        <WhatsappShareButton />
+        <Paper
+          square
+          sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }}
+          elevation={3}
+        >
+          <BottomNavigation>
+            <Button
+              fullWidth
+              variant="contained"
+              endIcon={<CallIcon />}
+              onClick={handleClickOpen}
+            >
+              Contacto
+            </Button>
+          </BottomNavigation>
+        </Paper>
+      </Container>
     </div>
   )
 }

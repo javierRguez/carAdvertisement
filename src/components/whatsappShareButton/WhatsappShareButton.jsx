@@ -11,7 +11,7 @@ function WhatsappShareButton() {
     <Paper elevation={3} className="custom-paper">
       <div className="icon-container">
         <a
-          href="whatsapp://send?text=Hey! mira este coche: https://www.coches.net/renault-talisman-st-zen-energy-dci-96kw-130cv-5p-diesel-2018-en-madrid-50805898-covo.aspx"
+          href="whatsapp://send?text=Hey! mira este coche: https://car-advertisement.web.app/"
           data-action="share/whatsapp/share"
           target="_blank"
           rel="noreferrer"
