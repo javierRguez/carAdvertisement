@@ -27,6 +27,7 @@ function LightBox({
             onClick={() => {
               event(false, imageIndex)
               setImageIndex(0)
+              document.body.style.overflow = 'auto'
             }}
           >
             <Close fill="#fff" />

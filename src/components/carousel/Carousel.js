@@ -158,6 +158,7 @@ function Carousel({
               className="zoom"
               onClick={() => {
                 openLightBoxHandler(true, slide)
+                document.body.style.overflow = 'hidden'
               }}
             >
               <ZoomOutMapIcon />

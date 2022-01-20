@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
 import './App.css'
 import Typography from '@mui/material/Typography'
@@ -9,15 +10,12 @@ import Carousel from './components/carousel/Carousel'
 import LightBox from './components/lightbox/LightBox '
 import Tabs from './components/tabs/Tabs'
 import WhatsappShareButton from './components/whatsappShareButton/WhatsappShareButton'
+import ContactModal from './components/contactModal/ContactModal'
 
 function App() {
   const [toggle, setToggle] = useState(false)
   const [sIndex, setSIndex] = useState(0)
-
-  const lightBoxHandler = (state, sIndexAux) => {
-    setToggle(state)
-    setSIndex(sIndexAux)
-  }
+  const [open, setOpen] = React.useState(false)
   const data = [
     {
       image: 'https://a.ccdn.es/cnet/2021/12/18/50840372/528052845_g.jpg',
@@ -65,8 +63,22 @@ function App() {
     },
   ]
 
+  const lightBoxHandler = (state, sIndexAux) => {
+    setToggle(state)
+    setSIndex(sIndexAux)
+  }
+
+  const handleClickOpen = () => {
+    setOpen(true)
+  }
+
+  const handleClose = () => {
+    setOpen(false)
+  }
+
   return (
     <div className="App" style={{ paddingBottom: '60px' }}>
+      <ContactModal closeModal={handleClose} open={open} />
       <LightBox
         state={toggle}
         event={lightBoxHandler}
@@ -135,7 +147,12 @@ function App() {
         elevation={3}
       >
         <BottomNavigation>
-          <Button fullWidth variant="contained" endIcon={<CallIcon />}>
+          <Button
+            fullWidth
+            variant="contained"
+            endIcon={<CallIcon />}
+            onClick={handleClickOpen}
+          >
             Contacto
           </Button>
         </BottomNavigation>
