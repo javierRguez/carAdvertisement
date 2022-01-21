@@ -11,7 +11,7 @@ function WhatsappShareButton() {
     <Paper elevation={3} className="custom-paper">
       <div className="icon-container">
         <a
-          href="whatsapp://send?text=Hey! mira este coche: https://car-advertisement.web.app/"
+          href="whatsapp://send?text=Hey! mira este coche: https://mi-coche-ford.web.app/"
           data-action="share/whatsapp/share"
           target="_blank"
           rel="noreferrer"

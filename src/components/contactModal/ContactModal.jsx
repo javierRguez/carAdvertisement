@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react'
+import { init, send } from '@emailjs/browser'
 import Button from '@mui/material/Button'
 import Dialog from '@mui/material/Dialog'
 import DialogActions from '@mui/material/DialogActions'
@@ -10,6 +11,8 @@ import Typography from '@mui/material/Typography'
 import TextField from '@mui/material/TextField'
 import Grid from '@mui/material/Grid'
 import congrats from '../../img/congrats.png'
+
+init('user_JKfBhZ00Kpk0uwPp4bCv6')
 
 function AlertDialog({ closeModal, open }) {
   const [name, setName] = useState('')
@@ -24,6 +27,22 @@ function AlertDialog({ closeModal, open }) {
     setPhone('')
   }
 
+  const handleSend = () => {
+    send('service_tc3snwu', 'template_wd1w289', {
+      email,
+      name,
+      phone,
+    }).then(
+      (response) => {
+        console.log('SUCCESS!', response.status, response.text)
+      },
+      (error) => {
+        console.log('FAILED...', error)
+      }
+    )
+    setModalState(1)
+  }
+
   return (
     <Dialog
       open={open}
@@ -32,7 +51,7 @@ function AlertDialog({ closeModal, open }) {
       }}
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
-      className="pruebamio"
+      className="dialog-container"
     >
       {modalState > 0 ? (
         <div
@@ -88,13 +107,19 @@ function AlertDialog({ closeModal, open }) {
               justifyContent: 'space-around',
             }}
           >
+            <DialogContentText align="center" id="alert-dialog-description">
+              Puede llamar a este número
+            </DialogContentText>
+            <Typography align="center" variant="h6" component="div">
+              <a href="tel:653842014">653842014</a>
+            </Typography>
             <DialogContentText
               gutterBottom
               align="center"
               id="alert-dialog-description"
             >
-              Para poder ponernos en contacto con usted, necesitamos que nos
-              facilite la siguiente información
+              o si lo desea, puede facilitarnos la siguiente información y
+              nosotros nos pondremos en contacto con usted
             </DialogContentText>
             <Grid container spacing={2}>
               <Grid item xs={12}>
@@ -150,7 +175,7 @@ function AlertDialog({ closeModal, open }) {
             <Button
               variant="contained"
               disabled={!name || (!email && !phone)}
-              onClick={() => setModalState(1)}
+              onClick={() => handleSend()}
             >
               Enviar
             </Button>

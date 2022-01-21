@@ -14,16 +14,22 @@ function TabPanel(props) {
   const { children, value, index, ...other } = props
 
   return (
-    <div
-      style={{ textAlign: 'left' }}
-      role="tabpanel"
-      hidden={value !== index}
-      id={`vertical-tabpanel-${index}`}
-      aria-labelledby={`vertical-tab-${index}`}
-      {...other}
-    >
-      {value === index && <Box sx={{ p: 2 }}>{children}</Box>}
-    </div>
+    <>
+      <div
+        style={{ textAlign: 'left' }}
+        role="tabpanel"
+        hidden={value !== index}
+        id={`vertical-tabpanel-${index}`}
+        aria-labelledby={`vertical-tab-${index}`}
+        {...other}
+      >
+        {value === index && <Box sx={{ p: 2 }}>{children}</Box>}
+      </div>
+      <p style={{ fontSize: '10px' }}>
+        *Este anuncio no es vinculante, puede contener errores. Se muestra a
+        titulo informativo y no contractual.
+      </p>
+    </>
   )
 }
 
@@ -42,9 +48,9 @@ const TabsComponent = () => {
   return (
     <>
       <Tabs variant="fullWidth" value={value} onChange={handleChange}>
-        <Tab label="Descripción" />
-        <Tab label="Ficha técnica" />
-        <Tab label="Equipamiento" />
+        <Tab className="tab-label" label="Descripción" />
+        <Tab className="tab-label" label="Ficha técnica" />
+        <Tab className="tab-label" label="Equipamiento" />
       </Tabs>
       <SwipeableViews
         containerStyle={{

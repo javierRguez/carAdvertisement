@@ -21,8 +21,22 @@ li {
 hr {
   margin-bottom: 0.75em !important;
 }
-.pruebamio .MuiDialog-paper {
+.dialog-container .MuiDialog-paper {
   border-radius: 10px !important;
   padding: 2% !important;
   min-height: 500px;
+}
+.tab-label {
+  font-size: 0.875rem !important;
+  font-weight: bolder !important;
+}
+@media screen and (min-width: 351px) and (max-width: 400px) {
+  .tab-label {
+    font-size: 0.75rem !important;
+  }
+}
+@media screen and (max-width: 350px) {
+  .tab-label {
+    font-size: 0.7rem !important;
+  }
 }
