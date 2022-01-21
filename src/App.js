@@ -82,7 +82,7 @@ function App() {
     <div className="App" style={{ paddingBottom: '60px' }}>
       <Helmet>
         <title>Ford Focus (2005) - 3.255 €</title>
-        <link rel="canonical" href="https://car-advertisement.web.app/" />
+        <link rel="canonical" href="https://mi-coche-ford.web.app/" />
       </Helmet>
       <ContactModal closeModal={handleClose} open={open} />
       <LightBox
