@@ -14,54 +14,76 @@ import Tabs from './components/tabs/Tabs'
 import WhatsappShareButton from './components/whatsappShareButton/WhatsappShareButton'
 import ContactModal from './components/contactModal/ContactModal'
 
+const imgCar1 = require('./img/img_car_1.jpg')
+const imgCar2 = require('./img/img_car_2.jpg')
+const imgCar3 = require('./img/img_car_3.jpg')
+const imgCar4 = require('./img/img_car_4.jpg')
+const imgCar5 = require('./img/img_car_5.jpg')
+const imgCar6 = require('./img/img_car_6.jpg')
+const imgCar7 = require('./img/img_car_7.jpg')
+const imgCar8 = require('./img/img_car_8.jpg')
+const imgCar9 = require('./img/img_car_9.jpg')
+const imgCar10 = require('./img/img_car_10.jpg')
+const imgCar11 = require('./img/img_car_11.jpg')
+const imgCar12 = require('./img/img_car_12.jpg')
+const imgCar13 = require('./img/img_car_13.jpg')
+
 function App() {
   const [toggle, setToggle] = useState(false)
   const [sIndex, setSIndex] = useState(0)
   const [open, setOpen] = React.useState(false)
   const data = [
     {
-      image: 'https://a.ccdn.es/cnet/2021/12/18/50840372/528052845_g.jpg',
-      caption: `<div>
-                  San Francisco
-                  <br/>
-                  Next line
-                </div>`,
+      image: imgCar1,
+      caption: 'frontal 1 ford focus',
     },
     {
-      image: 'https://a.ccdn.es/cnet/2021/12/18/50840372/528052847_g.jpg',
-      caption: 'Scotland',
+      image: imgCar2,
+      caption: 'frontal 2 ford focus',
     },
     {
-      image: 'https://a.ccdn.es/cnet/2021/12/18/50840372/528052849_g.jpg',
-      caption: 'Darjeeling',
+      image: imgCar3,
+      caption: 'trasera 1 ford focus',
     },
     {
-      image: 'https://a.ccdn.es/cnet/2021/12/18/50840372/528052853_g.jpg',
-      caption: 'San Francisco',
+      image: imgCar4,
+      caption: 'trasera 2 ford focus',
     },
     {
-      image: 'https://a.ccdn.es/cnet/2021/12/18/50840372/528052857_g.jpg',
-      caption: 'Scotland',
+      image: imgCar5,
+      caption: 'puerta piloto ford focus',
     },
     {
-      image: 'https://a.ccdn.es/cnet/2021/12/18/50840372/528052862_g.jpg',
-      caption: 'Darjeeling',
+      image: imgCar6,
+      caption: 'asiento piloto 1 ford focus',
     },
     {
-      image: 'https://a.ccdn.es/cnet/2021/12/18/50840372/528052865_g.jpg',
-      caption: 'San Francisco',
+      image: imgCar7,
+      caption: 'asiento piloto 2 ford focus',
     },
     {
-      image: 'https://a.ccdn.es/cnet/2021/12/18/50840372/528052869_g.jpg',
-      caption: 'Scotland',
+      image: imgCar8,
+      caption: 'volante ford focus',
     },
     {
-      image: 'https://a.ccdn.es/cnet/2021/12/18/50840372/528052872_g.jpg',
-      caption: 'Darjeeling',
+      image: imgCar9,
+      caption: 'asiento copiloto 1 ford focus',
     },
     {
-      image: 'https://a.ccdn.es/cnet/2021/12/18/50840372/528052879_g.jpg',
-      caption: 'Darjeeling',
+      image: imgCar10,
+      caption: 'asiento copiloto 2 ford focus',
+    },
+    {
+      image: imgCar11,
+      caption: 'asiento trasero ford focus',
+    },
+    {
+      image: imgCar12,
+      caption: 'interior ford focus',
+    },
+    {
+      image: imgCar13,
+      caption: 'maletero ford focus',
     },
   ]
 
