@@ -14,75 +14,61 @@ import Tabs from './components/tabs/Tabs'
 import WhatsappShareButton from './components/whatsappShareButton/WhatsappShareButton'
 import ContactModal from './components/contactModal/ContactModal'
 
-const imgCar1 = require('./img/img_car_1.jpg')
-const imgCar2 = require('./img/img_car_2.jpg')
-const imgCar3 = require('./img/img_car_3.jpg')
-const imgCar4 = require('./img/img_car_4.jpg')
-const imgCar5 = require('./img/img_car_5.jpg')
-const imgCar6 = require('./img/img_car_6.jpg')
-const imgCar7 = require('./img/img_car_7.jpg')
-const imgCar8 = require('./img/img_car_8.jpg')
-const imgCar9 = require('./img/img_car_9.jpg')
-const imgCar10 = require('./img/img_car_10.jpg')
-const imgCar11 = require('./img/img_car_11.jpg')
-const imgCar12 = require('./img/img_car_12.jpg')
-const imgCar13 = require('./img/img_car_13.jpg')
-
 function App() {
   const [toggle, setToggle] = useState(false)
   const [sIndex, setSIndex] = useState(0)
   const [open, setOpen] = React.useState(false)
   const data = [
     {
-      image: imgCar1,
+      image: 'https://uanducto.sirv.com/Images/car/img_car_1.jpg',
       caption: 'frontal 1 ford focus',
     },
     {
-      image: imgCar2,
+      image: 'https://uanducto.sirv.com/Images/car/img_car_2.jpg',
       caption: 'frontal 2 ford focus',
     },
     {
-      image: imgCar3,
+      image: 'https://uanducto.sirv.com/Images/car/img_car_3.jpg',
       caption: 'trasera 1 ford focus',
     },
     {
-      image: imgCar4,
+      image: 'https://uanducto.sirv.com/Images/car/img_car_4.jpg',
       caption: 'trasera 2 ford focus',
     },
     {
-      image: imgCar5,
+      image: 'https://uanducto.sirv.com/Images/car/img_car_5.jpg',
       caption: 'puerta piloto ford focus',
     },
     {
-      image: imgCar6,
+      image: 'https://uanducto.sirv.com/Images/car/img_car_6.jpg',
       caption: 'asiento piloto 1 ford focus',
     },
     {
-      image: imgCar7,
+      image: 'https://uanducto.sirv.com/Images/car/img_car_7.jpg',
       caption: 'asiento piloto 2 ford focus',
     },
     {
-      image: imgCar8,
+      image: 'https://uanducto.sirv.com/Images/car/img_car_8.jpg',
       caption: 'volante ford focus',
     },
     {
-      image: imgCar9,
+      image: 'https://uanducto.sirv.com/Images/car/img_car_9.jpg',
       caption: 'asiento copiloto 1 ford focus',
     },
     {
-      image: imgCar10,
+      image: 'https://uanducto.sirv.com/Images/car/img_car_10.jpg',
       caption: 'asiento copiloto 2 ford focus',
     },
     {
-      image: imgCar11,
+      image: 'https://uanducto.sirv.com/Images/car/img_car_11.jpg',
       caption: 'asiento trasero ford focus',
     },
     {
-      image: imgCar12,
+      image: 'https://uanducto.sirv.com/Images/car/img_car_12.jpg',
       caption: 'interior ford focus',
     },
     {
-      image: imgCar13,
+      image: 'https://uanducto.sirv.com/Images/car/img_car_13.jpg',
       caption: 'maletero ford focus',
     },
   ]
