@@ -1,7 +1,10 @@
 import React from 'react'
 import Typography from '@mui/material/Typography'
+import useAnalytics from '../../hooks/useAnalytics'
 
 function TabDescription() {
+  useAnalytics('user-view-tabDescription')
+
   return (
     <div>
       <Typography variant="body1" component="div">

@@ -4,8 +4,10 @@ import Divider from '@mui/material/Divider'
 import shield from '../../img/shield.png'
 import comfort from '../../img/comfort.png'
 import multimedia from '../../img/multimedia.png'
+import useAnalytics from '../../hooks/useAnalytics'
 
 function TabEquipment() {
+  useAnalytics('user-view-tabEquipment')
   return (
     <div>
       <div style={{ display: 'flex', alignItems: 'center' }}>

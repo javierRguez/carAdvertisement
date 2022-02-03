@@ -8,16 +8,19 @@ import CallIcon from '@mui/icons-material/Call'
 import Paper from '@mui/material/Paper'
 import BottomNavigation from '@mui/material/BottomNavigation'
 import Button from '@mui/material/Button'
+import { analytics, logEvent } from './utils/firebase'
 import Carousel from './components/carousel/Carousel'
 import LightBox from './components/lightbox/LightBox '
 import Tabs from './components/tabs/Tabs'
 import WhatsappShareButton from './components/whatsappShareButton/WhatsappShareButton'
 import ContactModal from './components/contactModal/ContactModal'
+import useAnalytics from './hooks/useAnalytics'
 
 function App() {
   const [toggle, setToggle] = useState(false)
   const [sIndex, setSIndex] = useState(0)
   const [open, setOpen] = React.useState(false)
+  useAnalytics('user-view-home')
   const data = [
     {
       image: 'https://uanducto.sirv.com/Images/car/img_car_1.jpg',
@@ -79,6 +82,7 @@ function App() {
   }
 
   const handleClickOpen = () => {
+    logEvent(analytics, 'user-view-contactModal')
     setOpen(true)
   }
 

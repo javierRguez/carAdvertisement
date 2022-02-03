@@ -4,8 +4,10 @@ import Divider from '@mui/material/Divider'
 import engine from '../../img/engine.png'
 import car from '../../img/car.png'
 import consumption from '../../img/consumption.png'
+import useAnalytics from '../../hooks/useAnalytics'
 
 function TabTechDetails() {
+  useAnalytics('user-view-tabTechDetails')
   return (
     <div>
       <div style={{ display: 'flex', alignItems: 'center' }}>
