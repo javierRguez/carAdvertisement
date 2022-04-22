@@ -93,7 +93,7 @@ function App() {
   return (
     <div className="App" style={{ paddingBottom: '60px' }}>
       <Helmet>
-        <title>Ford Focus (2005) - 3.255 €</title>
+        <title>Ford Focus (2005) - 2.800 €</title>
         <link rel="canonical" href="https://mi-coche-ford.web.app/" />
       </Helmet>
       <ContactModal closeModal={handleClose} open={open} />
@@ -154,7 +154,7 @@ function App() {
             }}
           >
             <Typography variant="h3" component="div" gutterBottom>
-              3.255€
+              2.800€
             </Typography>
           </div>
           <Tabs />
